@@ -1,0 +1,17 @@
+# toolbarMode "viewer" hides the developer toolbar (rerun/clear cache/Deploy
+# button and menu entries, including the "install Streamlit skills" promo
+# tied to the Deploy menu) — shown by default ("auto") because the app is
+# accessed via localhost. Scoped to just this, verified against
+# `streamlit config show`'s own documentation before applying (unlike the
+# earlier [theme] mistake, which hid the theme picker as an undocumented
+# side effect — this option has no relation to theme).
+[client]
+toolbarMode = "viewer"
+
+# gatherUsageStats sends anonymous usage telemetry to Streamlit/Snowflake on
+# every session start (confirmed live: the webhooks.fivetran.com POST seen
+# in the browser console traced back to index.*.js's own initialize ->
+# handleNewSession -> track/send chain, not our code or a browser
+# extension). Disabled per the user's explicit choice.
+[browser]
+gatherUsageStats = false

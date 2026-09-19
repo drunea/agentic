@@ -1,0 +1,24 @@
+# Lower bound = the version this project was developed/tested against.
+# pydantic-ai and chromadb break between minor releases, so they're capped at
+# the next minor — bump deliberately after re-running the tests. Everything
+# else is capped at the next major.
+pydantic-ai>=2.43,<2.44
+python-dotenv>=1.2,<2
+httpx>=0.28,<0.29
+httpx2>=2.12,<3
+pydantic-settings>=2.15,<3
+sqlalchemy>=2.0.52,<3
+pymysql>=1.2,<2
+alembic>=1.20,<2
+fastapi>=0.141,<1
+uvicorn[standard]>=0.52,<1
+streamlit>=1.63,<2
+yfinance>=1.7,<2
+pandas>=3.0,<4
+pandas-ta>=0.4.71b0,<0.5
+vaderSentiment>=3.3,<4
+plotly>=7.0,<8
+chromadb>=1.5,<1.6
+sec-edgar-downloader>=5.1,<6
+langchain-text-splitters>=1.1,<2
+beautifulsoup4>=4.15,<5
